@@ -10,7 +10,13 @@
     </head>
     <body>
        <h1>Welcome to Gif Grabber!</h1>
-        
+       <button id='heart' > ❤️ </button>
+        <form action="https://localhost:3000/gifs" method="GET">
+            <label> Gif Search: <input type="text" name="gifName" id="gifName" placeholder="Type Gif Name"></label>
+            <input type="submit" name="submit" id="submit" value="Search Gifs" />
+            <label> Trending Search: <input type="text" name="trendName" id="trendName" placeholder="Type Gif Name"></label>
+            <input type="submit" name="submit" id="submit" value="Search Trending" /> 
+        </form>
         <script type="application/javascript" src="src/index.js" charset="UTF-8"></script>
     </body>
 </html>
