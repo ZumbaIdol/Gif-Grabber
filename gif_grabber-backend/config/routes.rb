@@ -3,5 +3,4 @@ Rails.application.routes.draw do
   get '/test', to: 'application#test'
   get '/users', to: 'users#index'
   post '/gifs', to: 'gifs#create'
-  get '/gifs', to: 'gifs#test'
 end
