@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(50, 133, 168);
+    color: rgb(255, 255, 255);
+    font-family: interface, "Helvetica Neue", helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    height: 100%;
+    letter-spacing: 0px;
+    min-height: 500px;
+    overflow-y: scroll;
+    text-align: left;
+    width: 1040px;
+    min-width: 1040px;
+    vertical-align: baseline;
+    line-height: unset;
+    margin: 0px auto;
+    padding: 0px;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    list-style: none;
+}
