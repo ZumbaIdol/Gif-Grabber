@@ -1,4 +1,4 @@
-import { response } from "express"
+//import { response } from "express"
 
 // const BACKEND_URL = "https://localhost:3000"
 // fetch(`${BACKEND_URL}/test`)
@@ -10,8 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const gifSearch = document.querySelector("#gifName")
     const trendSearch = document.querySelector("#trendName")
 
-    fetch(gifSearch)
-        .then(response => response.json())
-        .then(json => container.innerHTML)
+    fetch(urlSearch)
+        .then(response =>{
+            return response.json()
+        }) 
+        .then(json => {
+            container.innerHTML = gifArrayHTML(json)
+        })
 })
 
