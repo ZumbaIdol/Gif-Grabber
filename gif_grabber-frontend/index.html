@@ -7,19 +7,19 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="application/javascript" src="src/index.js" charset="UTF-8"></script>
     </head>
     <body>
         <div id="container">
-       <h1>Gif Grabber!</h1>
-       <h3>Your one stop gif shop...</h3>
-       <button id='heart' > ❤️ </button>
-        <form action="https://localhost:3000/gifs" method="GET">
-            <label> Gif Search: <input type="text" name="gifName" id="gifName" placeholder="Type Gif Name"></label>
-            <input type="submit" name="submit" id="submit" value="Search Gifs" />
-            <label> Trending Search: <input type="text" name="trendName" id="trendName" placeholder="Type Gif Name"></label>
-            <input type="submit" name="submit" id="submit" value="Search Trending" /> 
-        </form>
-        <script type="application/javascript" src="src/index.js" charset="UTF-8"></script>
+            <h1>Gif Grabber!</h1>
+            <h3>Your one stop gif shop...</h3>
+            <!-- button id='heart' > ❤️ </button -->
+            <form action="https://localhost:3000/gifs" method="GET">
+                <label> Gif Search: <input type="text" name="gifName" id="gifName" placeholder="Type Gif Name"></label>
+                <input type="submit" name="submit" id="submit" value="Search Gifs" /><br><br>
+                <label> Trending Search: <input type="text" name="trendName" id="trendName" placeholder="Type Gif Name"></label>
+                <input type="submit" name="submit" id="submit" value="Search Trending" /> 
+            </form>
         </div>
     </body>
 </html>
