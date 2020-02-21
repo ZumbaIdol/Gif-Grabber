@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.delete_all
+Gif.delete_all
 
 users_name = [
   'Prince',

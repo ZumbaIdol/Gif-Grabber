@@ -1,5 +1,6 @@
-class Gifs < ApplicationController
-    def test
-        render json: { test: 'Success!' }
+class GifsController < ApplicationController
+    def index
+        @gifs = Gif.all
+        render json: @gifs
     end
 end
