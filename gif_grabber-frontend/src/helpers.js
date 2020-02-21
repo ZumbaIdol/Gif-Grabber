@@ -6,7 +6,10 @@ const gifHTML = (gifObj) => {
     return (`
         <div class="gif-card">
             <div class="gif-frame">
-            <h1 class="center-text">${gifObj.name}</h1>
+                <h1 class="center-text">${gifObj.name}</h1>
+            </div>
+            <div class="gif-image">
+                <img data-id="${gifObj.id}">
             </div>
         </div>`
     )}
