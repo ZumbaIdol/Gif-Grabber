@@ -1,27 +1,23 @@
-const BACKEND_URL = "https://localhost:3000";
-const USERS_URL = `${BACKEND_URL}/users`;
-const GIFS_URL = `${BACKEND_URL}/gifs`;
 /////////////////////////////////////////////////////////////////
 ////////////////////////DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
 //////////////////////////////
 //////////////Invoke GET fetch
-    fetchUsers();
-
-////////////////////////////////////////////////////////////////
-////////////GET fetch for Users
-function fetchUsers() {
-    fetch("USERS_URL")
-    .then(response => response.json()) 
-    .then(data => {
-        data.forEach(user => {
+fetch('http://localhost:3000/users')
+    .then(resp => resp.json())
+    .then(users => {
+        users.forEach(user=> {
             const { id, name } = user
+            new User(id, name)
         })
-    });
-} 
-    renderUsers();
-///////////////////////////////////////////////////////////////
-//////////////Render Users
-function renderUsers() {
-    
-}
+    })
+
+fetch('http://localhost:3000/gifs')
+    .then(resp => resp.json())
+    .then(gifs => {
+        gifs.forEach(gif=> {
+            const { id, name } = gif
+            new Gif(id, name)
+        })
+    })
+})

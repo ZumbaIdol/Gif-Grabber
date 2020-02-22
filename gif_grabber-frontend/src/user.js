@@ -1,7 +1,5 @@
 class User {
-    constructor(id, name) {
-        this.id = id
-        this.name = name
-        this.render()
+    constructor() {
+        this.userUrl = ('https//localhost:3000/users')
     }
 }
