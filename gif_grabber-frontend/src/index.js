@@ -1,21 +1,25 @@
-//import { response } from "express"
-
-// const BACKEND_URL = "https://localhost:3000"
-// fetch(`${BACKEND_URL}/test`)
-// .then(response => response.json())
-// .then(parsedResponse => console.log(parsedResponse))
-
+const BACKEND_URL = "https://localhost:3000";
+const USERS_URL = `${BACKEND_URL}/users`;
+const GIFS_URL = `${BACKEND_URL}/gifs`;
+/////////////////////////////////////////////////////////////////
+////////////////////////DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector("#gif-container")
-    const gifSearch = document.querySelector("#gifName")
-    const trendSearch = document.querySelector("#trendName")
+//////////////////////////////
+//////////////Invoke GET fetch
+    fetchUsers();
 
-    fetch(urlSearch)
-        .then(response =>{
-            return response.json()
-        }) 
-        .then(json => {
-            container.innerHTML = gifArrayHTML(json)
-        })
-})
-
+////////////////////////////////////////////////////////////////
+////////////GET fetch for Users
+function fetchUsers() {
+    fetch("USERS_URL")
+    .then(response => response.json()) 
+    .then(data => {
+        data.forEach(renderUsers())
+    });
+} 
+        
+///////////////////////////////////////////////////////////////
+//////////////Render Users
+function renderUsers() {
+    
+}
