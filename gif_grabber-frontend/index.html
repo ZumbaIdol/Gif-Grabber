@@ -8,18 +8,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="style.css">
         <script type="application/javascript" src="src/index.js" charset="UTF-8"></script>
-        <script type="text/javascript" src="src/helpers.js"></script>
+        <script type="text/javascript" src="src/gif.js"></script>
     </head>
     <body>
+        <h1>Gif Grabber!</h1>
+        <h3>Your one stop gif site...</h3>
         <div id="container">
-            <h1>Gif Grabber!</h1>
-            <h3>Your one stop gif site...</h3>
-            <!-- button id='heart' > ❤️ </button -->
-            <form action="https://localhost:3000/gifs" method="GET">
+            <div id="form">
+                <h4>Search for Gifs</h4>
+                <form id="gif-form">
                 <label> Gif Search: <input type="text" name="gifName" id="gifName" placeholder="Type Gif Name"></label>
                 <input type="submit" name="submit" id="submit" value="Search Gifs" /><br><br>
-                <!--label> Trending Search: <input type="text" name="trendName" id="trendName" placeholder="Type Gif Name"></!--label>
-                <input type="submit" name="submit" id="submit" value="Search Trending" /--> 
             </form>
             <div id="gif-container">
                 <p>No gifs grabbed yet...</p>
@@ -27,3 +26,5 @@
         </div>
     </body>
 </html>
+
+            <!-- button id='heart' > ❤️ </button -->

@@ -14,10 +14,12 @@ function fetchUsers() {
     fetch("USERS_URL")
     .then(response => response.json()) 
     .then(data => {
-        data.forEach(renderUsers())
+        data.forEach(user => {
+            const { id, name } = user
+        })
     });
 } 
-        
+    renderUsers();
 ///////////////////////////////////////////////////////////////
 //////////////Render Users
 function renderUsers() {
