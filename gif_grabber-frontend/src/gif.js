@@ -1,11 +1,18 @@
+import { response } from "express"
+
 class Gif {
-    constructor(category, name, user_id) {
-        this.category = category
-        this.name = name
-        this.user_id = user_id
-        this.render()
+    constructor() {
+        this.gifUrl = ('https://api.giphy.com/v1/gifs/search?api_key=7x3PQolnMLSyWjEZZbWtov3SGXRutNak&q=excited&limit=25&offset=0&rating=G&lang=en')
     }
 
+    getGifs() {
+        return fetch(this.gifUrl).then(response => response.json())
+    }
+
+    createGif(category, id) {
+        category: value
+        user_id: id 
+    }
 }
 
 // const urlSearch = 'https://api.giphy.com/v1/gifs/search?api_key=7x3PQolnMLSyWjEZZbWtov3SGXRutNak&q=excited&limit=25&offset=0&rating=G&lang=en'
