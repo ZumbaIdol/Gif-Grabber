@@ -20,4 +20,13 @@ fetch('http://localhost:3000/gifs')
             new Gif(id, name)
         })
     })
+
+    function logSubmit(e) {
+        log.textContent = `Form submitted! Timestamp: ${event.timeStamp}`
+        e.preventDefault();
+    }
+
+    const form = document.getElementById('gif-form');
+    const log =  document.getElementById('log');
+    form.addEventListener('submit', logSubmit);
 })
