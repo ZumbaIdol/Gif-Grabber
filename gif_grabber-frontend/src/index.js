@@ -22,13 +22,9 @@ fetch('http://localhost:3000/gifs')
 
         fetch('https://api.giphy.com/v1/gifs/search?api_key=7x3PQolnMLSyWjEZZbWtov3SGXRutNak&q=excited&limit=25&offset=0&rating=G&lang=en')
       .then(response => response.json())
-      .then(gifs => {
-        gifs.forEach(gif => {
-            const { id, name } = gif
-            new Gif(id, name)
-        })
-    
+      .then(json => console.log(json))
     })
+
     // function logSubmit(e) {
     //     log.textContent = `Form Submitted! Time stamp: ${e.timeStamp}`;
     //     e.preventDefault();
@@ -37,5 +33,4 @@ fetch('http://localhost:3000/gifs')
     //   const form = document.getElementById('form');
     //   const log = document.getElementById('log');
     //   form.addEventListener('submit', logSubmit);
-    })
 })
