@@ -7,9 +7,13 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <script type="application/javascript" src="src/index.js" charset="UTF-8"></script>
-        <script type="text/javascript" src="src/gif.js"></script>
-        <script type="text/javascript" src="src/user.js"></script>
+        <script src="src/adapters/UsersAdapter.js"></script>
+        <script src="src/adapters/GifsAdapter.js"></script>
+        <script src="src/components/gif.js"></script>
+        <script src="src/components/gifs_manager.js"></script>
+        <script src="src/components/app.js"></script>
+        <script src="src/components/users.js"></script>
+        <script src="src/index.js"></script>
     </head>
     <body>
         <h1>Gif Grabber!</h1>
@@ -27,8 +31,7 @@
                 <label> Gif Search: <input type="text" name="gifName" id="gifName" placeholder="Type Gif Name"></label>
                 <input type="submit" name="submit" id="submit" value="Search Gifs" /><br><br>
             </form>
-            <p id="log"></p>
-            <div id="gif-container">
+            <div id="gifs-container">
                 <p>No gifs grabbed yet...</p>
             </div>
         </div>

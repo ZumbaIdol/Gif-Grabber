@@ -1,5 +1,3 @@
-import { response } from "express"
-
 class GifsAdapter {
     constructor() {
         this.baseUrl = ('https//localhost:3000/gifs')
