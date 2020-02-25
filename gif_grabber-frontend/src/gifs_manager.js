@@ -1,6 +1,6 @@
 class GifsManager {
     constructor() {
-        this.gifUrl = ('https://api.giphy.com/v1/gifs/search?api_key=7x3PQolnMLSyWjEZZbWtov3SGXRutNak&q=excited&limit=25&offset=0&rating=G&lang=en')
+        this.gifUrl = ('https://giphy.com/embed/xTiN0CNHgoRf1Ha7CM?api_key=7x3PQolnMLSyWjEZZbWtov3SGXRutNak&q=excited&limit=25&offset=0&rating=G&lang=en')
     }
 
     getGifs() {
