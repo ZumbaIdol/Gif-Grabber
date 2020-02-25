@@ -1,3 +1,3 @@
 class GifSerializer < ApplicationModel::Serializer
-    attributes :category, :name, :user_id
+    attributes :name, :user_id
 end

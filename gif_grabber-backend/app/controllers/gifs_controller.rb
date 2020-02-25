@@ -1,7 +1,12 @@
 class GifsController < ApplicationController
     def index
-        @gifs = Gif.all
-        render json: @gifs
+        gifs = Gif.all
+        render json: gifs
+    end
+
+    def show
+      gif = Gif.find(params[:id])
+      render json: gif, status: 200
     end
 
     def create
@@ -13,4 +18,25 @@ class GifsController < ApplicationController
           render json: { error: "Failed to grab gif", status: 500 }, status: 500
         end
     end  
+
+    def update
+      if params[:id] != 'undefined'
+        gif = Gif.find(params[:id])
+        gif.update(gif_params)
+        render json: gif, status: 200
+      end
+    end
+
+    def destroy
+      gif = Gif.find(params[:id])
+      gif.delete
+      render json: { gifID: gif.id }
+    end
+  end
+
+  private
+
+  def gif_params
+    params.require(:gif).permit(:name, :user_id)
+  end
 end
