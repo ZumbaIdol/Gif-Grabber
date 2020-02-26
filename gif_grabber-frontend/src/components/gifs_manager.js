@@ -11,15 +11,15 @@ class GifsManager {
     initBindingsAndEventListeners() {
         this.loginForm = document.getElementById('login-form')
         this.newUserInput = document.querySelector('#new-user')
+        // debugger
         this.loginForm.addEventListener('submit', this.loginUser.bind(this))
 
         this.gifsContainer = document.getElementById('gifs-container')
-        this.name = document.querySelector('gifName')
-        // this.newGifName = document.getElementById('new-gif-name')
-        // this.gifForm = document.getElementById('new-gif-form')
+        this.name = document.querySelector('#gifName')
+        this.gifForm = document.getElementById('gif-form')
         this.gifForm.addEventListener('submit', this.createGif.bind(this))
         this.gifsContainer.addEventListener('dblclick', this.handleGifClick.bind(this))
-        this.name.addEventListener('blur', this.updateNote.bind(this), true)
+        this.name.addEventListener('blur', this.updateGif.bind(this), true)
     }
 
     createGif(e) {
@@ -106,3 +106,27 @@ class GifsManager {
         } 
     }
 }
+
+// Render trainers & their pokemon
+// function renderTrainers(trainer) {
+//     const trainerContainer = document.getElementById("main-container");
+//     trainerContainer.insertAdjacentHTML("beforeend",
+//     `
+//         <div class="card" data-id=${trainer.id}><p>${trainer.name}</p>
+//         <button class="new" data-id=${trainer.id}>Add Pokemon</button>
+//         <ul id="trainer-${trainer.id}">
+        
+//         </ul>
+//         </div>
+//     `
+//     );
+//     const pokemonContainer = document.getElementById(`trainer-${trainer.id}`);
+//     trainer.pokemons.forEach(pokemon => {pokemonContainer.insertAdjacentHTML("beforeend",
+//     `
+//         <li>${pokemon.nickname} (${pokemon.species}) 
+//         <button class="release" data-id=${pokemon.id}>
+//         Release</button></li>
+//     `
+//     );
+//     });
+// }

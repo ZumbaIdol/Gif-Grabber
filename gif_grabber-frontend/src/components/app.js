@@ -1,6 +1,6 @@
 class App {
     constructor() {
-        this.gifs = new Gifs()
+        this.gifs = new GifsManager()
         this.clearStorage()
     }
 

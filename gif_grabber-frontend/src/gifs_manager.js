@@ -36,7 +36,7 @@ class GifsManager {
     }
     
     updateGif(value, id) {
-        const note = {
+        const gif = {
             category: value
         }
         return fetch(this.gifUrl + `/${id}`, {
