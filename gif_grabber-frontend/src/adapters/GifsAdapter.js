@@ -1,6 +1,6 @@
 class GifsAdapter {
     constructor() {
-        this.baseUrl = ('https//localhost:3000/gifs')
+        this.baseUrl = ('https://giphy.com/embed/xTiN0CNHgoRf1Ha7CM?api_key=7x3PQolnMLSyWjEZZbWtov3SGXRutNak&q=excited&limit=25&offset=0&rating=G&lang=en')
         }
 
         getGifs() {
@@ -14,6 +14,7 @@ class GifsAdapter {
             }
             return fetch(this.baseUrl, {
                 method: 'POST',
+                mode: 'no-cors',
                 headers: {
                     'content-type': 'application/json'
             }, 

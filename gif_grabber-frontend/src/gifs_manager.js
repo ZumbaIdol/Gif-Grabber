@@ -1,14 +1,14 @@
 class GifsManager {
     constructor() {
-        this.gifUrl = ('https://giphy.com/embed/xTiN0CNHgoRf1Ha7CM?api_key=7x3PQolnMLSyWjEZZbWtov3SGXRutNak&q=excited&limit=25&offset=0&rating=G&lang=en')
+        this.baseUrl = ('https://giphy.com/embed/xTiN0CNHgoRf1Ha7CM?api_key=7x3PQolnMLSyWjEZZbWtov3SGXRutNak&q=excited&limit=25&offset=0&rating=G&lang=en')
     }
 
     getGifs() {
-        return fetch(this.gifUrl).then(response => response.json())
+        return fetch(this.baseUrl).then(response => response.json())
     }
 
-    createGif(category, id) {
-        category: value
+    createGif(value, id) {
+        name: value
         user_id: id 
     }
 
@@ -37,9 +37,9 @@ class GifsManager {
     
     updateGif(value, id) {
         const gif = {
-            category: value
+            name: value
         }
-        return fetch(this.gifUrl + `/${id}`, {
+        return fetch(this.baseUrl + `/${id}`, {
             method: 'PATCH', 
             headers: {
                 'content-type': 'application/json'
@@ -51,16 +51,13 @@ class GifsManager {
     }
 
     deleteGif(id) {
-        return fetch(this.gifUrl + `/${id}`, {
+        return fetch(this.baseUrl + `/${id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())
     }
 }
 
-// const urlSearch = 'https://api.giphy.com/v1/gifs/search?api_key=7x3PQolnMLSyWjEZZbWtov3SGXRutNak&q=excited&limit=25&offset=0&rating=G&lang=en'
-
-// const urlTrend = 'https://api.giphy.com/v1/gifs/trending?api_key=7x3PQolnMLSyWjEZZbWtov3SGXRutNak&limit=25&rating=G'
 
 
     
