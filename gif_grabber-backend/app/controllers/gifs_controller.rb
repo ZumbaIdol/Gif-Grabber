@@ -3,7 +3,6 @@ class GifsController < ApplicationController
       gifs = Gif.all
       render json: gifs   
     end
-  end
 
     def show
       gif = Gif.find(params[:id])
@@ -33,7 +32,6 @@ class GifsController < ApplicationController
       gif.delete
       render json: { gifID: gif.id }
     end
-  end
 
   private
 

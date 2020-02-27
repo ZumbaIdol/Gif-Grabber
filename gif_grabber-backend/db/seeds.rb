@@ -1,3 +1,5 @@
+require 'HttParty'
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -8,6 +10,15 @@
 
 User.delete_all
 Gif.delete_all
+
+response = HTTParty.get('https://giphy.com/embed/xTiN0CNHgoRf1Ha7CM?api_key=7x3PQolnMLSyWjEZZbWtov3SGXRutNak&q=excited&limit=25&offset=0&rating=G&lang=en', format: :plain)
+JSON.parse response, symbolize_names: true
+
+gif_collection = []
+
+gif_name.each do |name|
+  gif_collection << Gif.create(name: name)
+end
 
 users_name = [
   'Prince',
