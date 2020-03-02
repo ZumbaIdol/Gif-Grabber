@@ -11,7 +11,7 @@ require 'HttParty'
 User.delete_all
 Gif.delete_all
 
-response = HTTParty.get('https://giphy.com/embed/xTiN0CNHgoRf1Ha7CM?api_key=7x3PQolnMLSyWjEZZbWtov3SGXRutNak&q=excited&limit=25&offset=0&rating=G&lang=en', format: :plain)
+response = HttParty.get('https://giphy.com/embed/xTiN0CNHgoRf1Ha7CM?api_key=7x3PQolnMLSyWjEZZbWtov3SGXRutNak&q=excited&limit=25&offset=0&rating=G&lang=en', format: :plain)
 JSON.parse response, symbolize_names: true
 
 gif_collection = []
@@ -36,3 +36,5 @@ user_collection = []
 users_name.each do |name|
   user_collection << User.create(name: name)
 end
+
+# Before you can display the gifs, you need to instantiate gif objects with your js class that have that embed url in them, and save them in an array in your PageManager object
