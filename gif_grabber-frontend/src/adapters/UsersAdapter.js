@@ -7,7 +7,7 @@ class UsersAdapter {
         const user = {
             name: value
         }
-        return fetch(`${this.baserUrl}/login`, {
+        return fetch(`${this.baserUrl}/login`, { // causing an error, method not allowed
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
