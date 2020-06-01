@@ -12,6 +12,7 @@ class GifsAdapter {
                 name: value,
                 user_id: id
             }
+            // debugger
             return fetch(this.baseUrl, { // causing a 403 forbidden error
                 method: 'POST',
                 mode: 'no-cors',

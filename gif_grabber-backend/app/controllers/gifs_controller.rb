@@ -5,7 +5,7 @@ class GifsController < ApplicationController
     end
 
     def show
-      gif = Gif.find(params[:id])
+      gif = Gif.find_by(id: params[:id])
       render json: gif, status: 200
     end
 
