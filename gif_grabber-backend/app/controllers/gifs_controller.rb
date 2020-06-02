@@ -1,12 +1,12 @@
 class GifsController < ApplicationController
     def index
       gifs = Gif.all
-      render json: gifs   
+      render json: gifs, include: [:users]   
     end
 
     def show
       gif = Gif.find_by(id: params[:id])
-      render json: gif, status: 200
+      render json: gif, include: [:user]  
     end
 
     def create

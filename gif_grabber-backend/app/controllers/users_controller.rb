@@ -1,12 +1,12 @@
 class UsersController < ApplicationController
    def index
     users = User.all
-    render json: users
+    render json: users, include: [:gifs]
    end
 
    def show
     user = User.find_by(id: params[:id])
-    render json: user
+    render json: user, include: [:gif]
    end
 
    def create
